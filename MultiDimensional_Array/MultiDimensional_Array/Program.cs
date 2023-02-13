@@ -33,29 +33,53 @@ namespace MultiDimensional_Array
             //    }
             //    Console.WriteLine();
             //}
-            int[,] numbers = new int[3, 6];
-            for (int row = 0; row < 3; row++)
+            string[] dimensions = Console.ReadLine().Split(", ");
+            int rows = int.Parse(dimensions[0]);
+            int columns = int.Parse(dimensions[1]);
+            int[,] numbers = new int[rows,columns];
+            for (int row = 0; row < rows; row++)
             {
                 string[] line = Console.ReadLine().Split(", ");
-                for (int col = 0; col < 6; col++)
+                for (int col = 0; col < columns; col++)
                 {
                     numbers[row, col] = int.Parse(line[col]);
                 }
             }
+            string[] submatrix = Console.ReadLine().Split(", ");
+            int subrow= int.Parse(submatrix[0]);
+            int subcol = int.Parse(submatrix[1]); 
             long maxSum = long.MinValue;
-            for (int row = 0; row < numbers.GetLength(0) - 1; row++)
+            int maxSumRow = 0;
+            int maxSumCol = 0;
+            for (int row = 0; row < numbers.GetLength(0) -subrow+ 1; row++)
             {
-                for (int col = 0; col < numbers.GetLength(1) - 1; col++)
+                for (int col = 0; col < numbers.GetLength(1) -subcol+ 1; col++)
                 {
-                    var sum = numbers[row, col] + numbers[row, col + 1] +
-                    numbers[row + 1, col] + numbers[row + 1, col + 1];
+                    var sum = 0;
+                    for (int i = 0; i < subrow; i++)
+                    {
+                        for (int j = 0; j < subcol; j++)
+                        {
+                            sum= sum+numbers[row+i,col+j];
+                        }
+                    }
                     if (sum > maxSum)
                     {
                         maxSum = sum;
+                        maxSumRow = row;
+                        maxSumCol = col;
                     }
                 }
             }
             Console.WriteLine(maxSum);
+            for (int row = maxSumRow; row < maxSumRow+subrow; row++)
+            {
+                for (int col = maxSumCol; col < maxSumCol+subcol; col++)
+                {
+                    Console.Write(numbers[row,col] + " ");
+                }
+                Console.WriteLine();
+            }
 
 
         }
