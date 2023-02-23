@@ -13,47 +13,47 @@ namespace Streams_Files
 
 
 
-
-            //using StreamReader sr = new StreamReader("countries.txt");
-            //using var sw = new StreamWriter("odd_countries.txt");
-            //int row = 1;
-            //while (!sr.EndOfStream)
-            //{
-            //    var line = sr.ReadLine();
-            //    sw.WriteLine($"{row}. {line}");
-            //    row++;
-            //}
-            //-----------------------------
-            //using FileStream filesSTream = new FileStream("countries.txt", FileMode.OpenOrCreate);
-            //var data = new byte[filesSTream.Length];
-
-
-            //var bytesPerFile = (int)Math.Ceiling(filesSTream.Length / 4.00);
-            //for (int i = 0; i < 4; i++)
-            //{
-            //    var buffer = new byte[bytesPerFile];
-            //    filesSTream.Read(buffer);
-            //    using FileStream writer = new FileStream($"Part-{i}.txt", FileMode.OpenOrCreate);
-            //    writer.Write(buffer);
-            //}
-            //--------------------
-            //using var sr = new StreamReader("countries.txt");
-            //var data = sr.ReadToEnd().ToCharArray();
-            //data[0] = '4';
-            //Console.WriteLine(data);
-            //var filecontent = File.ReadAllLines("countries.txt");
-            //foreach (var content in filecontent)
-            //{
-            //    Console.WriteLine(content);
-            //}
-            //File.WriteAllText("myfile.txt", "Serhan");
-            //var arr = new string[] { "opa", "red1", "red2" };
-            //File.WriteAllLines("arr.txt",arr);
-
-            //Directory.Move("test", "test123");
-            // DirectoryGetLenght--------------------------
+            //Cheten na fail i dobavqne---------
+            using StreamReader sr = new StreamReader("countries.txt");
+            using var sw = new StreamWriter("odd_countries.txt");
+            int row = 1;
+            while (!sr.EndOfStream)
+            {
+                var line = sr.ReadLine();
+                sw.WriteLine($"{row}. {line}");
+                row++;
+            }
+            //RABOTA S BYTOVE-----------------------------
+            using FileStream filesSTream = new FileStream("countries.txt", FileMode.OpenOrCreate);
+            var data = new byte[filesSTream.Length];
 
 
+            var bytesPerFile = (int)Math.Ceiling(filesSTream.Length / 4.00);
+            for (int i = 0; i < 4; i++)
+            {
+                var buffer = new byte[bytesPerFile];
+                filesSTream.Read(buffer);
+                using FileStream writer = new FileStream($"Part-{i}.txt", FileMode.OpenOrCreate);
+                writer.Write(buffer);
+            }
+            //RABOTA S FILE CLASA--------------------
+            using var sr = new streamreader("countries.txt");
+            var data = sr.readtoend().tochararray();
+            data[0] = '4';
+            console.writeline(data);
+            var filecontent = file.readalllines("countries.txt");
+            foreach (var content in filecontent)
+            {
+                console.writeline(content);
+            }
+            file.writealltext("myfile.txt", "serhan");
+            var arr = new string[] { "opa", "red1", "red2" };
+            file.writealllines("arr.txt", arr);
+
+            directory.move("test", "test123");
+
+
+            // REKURSIQ VLIZANE V VSICHKI SUBDIREKTORII--------------------------
             var directorypath = ".";
             
             static long GetTotalLenght(string directorypath)
