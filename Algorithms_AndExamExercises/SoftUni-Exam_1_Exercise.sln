@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftUniExam_2Exercise", "So
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheBattleOfFiveArmies", "TheBattleOfFiveArmies\TheBattleOfFiveArmies.csproj", "{53D6DC08-7F11-4629-B5C7-089BEE12802E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Street_Racing", "Street_Racing\Street_Racing.csproj", "{76D715EA-C8D5-494E-8357-59A1B4242E33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Street_Racing", "Street_Racing\Street_Racing.csproj", "{76D715EA-C8D5-494E-8357-59A1B4242E33}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Selection Sort", "Selection Sort\Selection Sort.csproj", "{97A093DB-B8D5-4DCB-B943-AD100CE5EC13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binary_Search", "Binary_Search\Binary_Search.csproj", "{3DEFEAD2-161B-45CD-B3C6-AACF52FC4854}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{76D715EA-C8D5-494E-8357-59A1B4242E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76D715EA-C8D5-494E-8357-59A1B4242E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76D715EA-C8D5-494E-8357-59A1B4242E33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97A093DB-B8D5-4DCB-B943-AD100CE5EC13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A093DB-B8D5-4DCB-B943-AD100CE5EC13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A093DB-B8D5-4DCB-B943-AD100CE5EC13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A093DB-B8D5-4DCB-B943-AD100CE5EC13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DEFEAD2-161B-45CD-B3C6-AACF52FC4854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DEFEAD2-161B-45CD-B3C6-AACF52FC4854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DEFEAD2-161B-45CD-B3C6-AACF52FC4854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DEFEAD2-161B-45CD-B3C6-AACF52FC4854}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
